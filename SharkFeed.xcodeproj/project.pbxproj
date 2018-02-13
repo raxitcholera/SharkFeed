@@ -13,6 +13,15 @@
 		78DE91612032871F00FCA10A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78DE915F2032871F00FCA10A /* LaunchScreen.storyboard */; };
 		78DE916B2032939800FCA10A /* client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE916A2032939800FCA10A /* client.swift */; };
 		78DE916D2032953300FCA10A /* FlickerImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE916C2032953300FCA10A /* FlickerImagesViewController.swift */; };
+		78DE91722032977300FCA10A /* commonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE91712032977300FCA10A /* commonFunctions.swift */; };
+		78DE9174203297D100FCA10A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE9173203297D100FCA10A /* CoreDataManager.swift */; };
+		78DE91762032982700FCA10A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE91752032982700FCA10A /* Constants.swift */; };
+		78DE917920329A6100FCA10A /* SharkFeed.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 78DE917720329A6100FCA10A /* SharkFeed.xcdatamodeld */; };
+		78DE917B20329AB600FCA10A /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE917A20329AB600FCA10A /* CoreDataStack.swift */; };
+		78DE918020329BC200FCA10A /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE917C20329BC200FCA10A /* Image+CoreDataClass.swift */; };
+		78DE918120329BC200FCA10A /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE917D20329BC200FCA10A /* Image+CoreDataProperties.swift */; };
+		78DE918220329BC200FCA10A /* Keyword+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE917E20329BC200FCA10A /* Keyword+CoreDataClass.swift */; };
+		78DE918320329BC200FCA10A /* Keyword+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE917F20329BC200FCA10A /* Keyword+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,15 @@
 		78DE91622032871F00FCA10A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78DE916A2032939800FCA10A /* client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = client.swift; sourceTree = "<group>"; };
 		78DE916C2032953300FCA10A /* FlickerImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerImagesViewController.swift; sourceTree = "<group>"; };
+		78DE91712032977300FCA10A /* commonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = commonFunctions.swift; sourceTree = "<group>"; };
+		78DE9173203297D100FCA10A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		78DE91752032982700FCA10A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		78DE917820329A6100FCA10A /* SharkFeed.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SharkFeed.xcdatamodel; sourceTree = "<group>"; };
+		78DE917A20329AB600FCA10A /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		78DE917C20329BC200FCA10A /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
+		78DE917D20329BC200FCA10A /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		78DE917E20329BC200FCA10A /* Keyword+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyword+CoreDataClass.swift"; sourceTree = "<group>"; };
+		78DE917F20329BC200FCA10A /* Keyword+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyword+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +74,22 @@
 		78DE91552032871F00FCA10A /* SharkFeed */ = {
 			isa = PBXGroup;
 			children = (
+				78DE917C20329BC200FCA10A /* Image+CoreDataClass.swift */,
+				78DE917D20329BC200FCA10A /* Image+CoreDataProperties.swift */,
+				78DE917E20329BC200FCA10A /* Keyword+CoreDataClass.swift */,
+				78DE917F20329BC200FCA10A /* Keyword+CoreDataProperties.swift */,
 				78DE91562032871F00FCA10A /* AppDelegate.swift */,
+				78DE917720329A6100FCA10A /* SharkFeed.xcdatamodeld */,
+				78DE917A20329AB600FCA10A /* CoreDataStack.swift */,
 				78DE916C2032953300FCA10A /* FlickerImagesViewController.swift */,
 				78DE915A2032871F00FCA10A /* Main.storyboard */,
 				78DE915D2032871F00FCA10A /* Assets.xcassets */,
 				78DE915F2032871F00FCA10A /* LaunchScreen.storyboard */,
 				78DE91622032871F00FCA10A /* Info.plist */,
 				78DE916A2032939800FCA10A /* client.swift */,
+				78DE91752032982700FCA10A /* Constants.swift */,
+				78DE91712032977300FCA10A /* commonFunctions.swift */,
+				78DE9173203297D100FCA10A /* CoreDataManager.swift */,
 			);
 			path = SharkFeed;
 			sourceTree = "<group>";
@@ -139,9 +166,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78DE918020329BC200FCA10A /* Image+CoreDataClass.swift in Sources */,
+				78DE918120329BC200FCA10A /* Image+CoreDataProperties.swift in Sources */,
 				78DE916D2032953300FCA10A /* FlickerImagesViewController.swift in Sources */,
 				78DE916B2032939800FCA10A /* client.swift in Sources */,
+				78DE91722032977300FCA10A /* commonFunctions.swift in Sources */,
+				78DE918220329BC200FCA10A /* Keyword+CoreDataClass.swift in Sources */,
+				78DE918320329BC200FCA10A /* Keyword+CoreDataProperties.swift in Sources */,
+				78DE917920329A6100FCA10A /* SharkFeed.xcdatamodeld in Sources */,
+				78DE9174203297D100FCA10A /* CoreDataManager.swift in Sources */,
 				78DE91572032871F00FCA10A /* AppDelegate.swift in Sources */,
+				78DE91762032982700FCA10A /* Constants.swift in Sources */,
+				78DE917B20329AB600FCA10A /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +364,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		78DE917720329A6100FCA10A /* SharkFeed.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				78DE917820329A6100FCA10A /* SharkFeed.xcdatamodel */,
+			);
+			currentVersion = 78DE917820329A6100FCA10A /* SharkFeed.xcdatamodel */;
+			path = SharkFeed.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 78DE914B2032871F00FCA10A /* Project object */;
 }
