@@ -18,6 +18,6 @@ extension Keyword {
     }
 
     @NSManaged public var text: String?
-    @NSManaged public var images: Image?
+    @NSManaged public var images: NSSet?
 
 }

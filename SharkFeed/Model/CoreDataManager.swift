@@ -18,6 +18,7 @@ class CoreDataManager: NSObject, SessionDownloadDelegate {
     
     static let sharedManager = CoreDataManager()
     weak var delegate: CoreDataManagerDelegate?
+    var keyword:Keyword!
     
     override private init()
     {
