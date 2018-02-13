@@ -74,24 +74,56 @@
 		78DE91552032871F00FCA10A /* SharkFeed */ = {
 			isa = PBXGroup;
 			children = (
+				78DE91842032A6CE00FCA10A /* Model */,
+				78DE91562032871F00FCA10A /* AppDelegate.swift */,
+				78DE91872032A71C00FCA10A /* Controller */,
+				78DE91862032A70000FCA10A /* View */,
+				78DE91622032871F00FCA10A /* Info.plist */,
+				78DE91852032A6EF00FCA10A /* Helpers */,
+			);
+			path = SharkFeed;
+			sourceTree = "<group>";
+		};
+		78DE91842032A6CE00FCA10A /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				78DE917C20329BC200FCA10A /* Image+CoreDataClass.swift */,
 				78DE917D20329BC200FCA10A /* Image+CoreDataProperties.swift */,
 				78DE917E20329BC200FCA10A /* Keyword+CoreDataClass.swift */,
 				78DE917F20329BC200FCA10A /* Keyword+CoreDataProperties.swift */,
-				78DE91562032871F00FCA10A /* AppDelegate.swift */,
 				78DE917720329A6100FCA10A /* SharkFeed.xcdatamodeld */,
+				78DE9173203297D100FCA10A /* CoreDataManager.swift */,
 				78DE917A20329AB600FCA10A /* CoreDataStack.swift */,
-				78DE916C2032953300FCA10A /* FlickerImagesViewController.swift */,
-				78DE915A2032871F00FCA10A /* Main.storyboard */,
-				78DE915D2032871F00FCA10A /* Assets.xcassets */,
-				78DE915F2032871F00FCA10A /* LaunchScreen.storyboard */,
-				78DE91622032871F00FCA10A /* Info.plist */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		78DE91852032A6EF00FCA10A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
 				78DE916A2032939800FCA10A /* client.swift */,
 				78DE91752032982700FCA10A /* Constants.swift */,
 				78DE91712032977300FCA10A /* commonFunctions.swift */,
-				78DE9173203297D100FCA10A /* CoreDataManager.swift */,
 			);
-			path = SharkFeed;
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		78DE91862032A70000FCA10A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				78DE915A2032871F00FCA10A /* Main.storyboard */,
+				78DE915D2032871F00FCA10A /* Assets.xcassets */,
+				78DE915F2032871F00FCA10A /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		78DE91872032A71C00FCA10A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				78DE916C2032953300FCA10A /* FlickerImagesViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
