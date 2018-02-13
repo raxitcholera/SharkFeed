@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        checkIfFirstLaunch()
         return true
     }
 
@@ -42,6 +43,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func checkIfFirstLaunch() {
+        if !UserDefaults.standard.bool(forKey: "HasLaunchedBefore") {
+            UserDefaults.standard.set(true, forKey: "HasLaunchedBefore")
+            preloadData()
+            UserDefaults.standard.synchronize()
+        }
+    }
+    func preloadData() {
+        // Remove previous stuff (if any)
+        do {
+            try dbStack.dropAllData()
+        } catch {
+            print("Error droping all objects in DB")
+        }
+        //load the default keyword as Shark here
+        let _ = Keyword(text: "Shark", context: dbStack.context)
+        dbStack.save()
+        
     }
 
 }
