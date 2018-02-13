@@ -10,12 +10,14 @@ import UIKit
 import CoreData
 
 private let reuseIdentifier = "sharkImages"
+private let refreshControl = UIRefreshControl()
 
 class FlickerImagesViewController: UIViewController, CoreDataManagerDelegate {
 
     
     @IBOutlet weak var imageCollectionView: UICollectionView!
     
+    var customView: UIView!
     var selectedKeyword:Keyword!
     private var imagesArray: [Image]!
     private var deleteImagesArray:[Image]!
@@ -34,12 +36,38 @@ class FlickerImagesViewController: UIViewController, CoreDataManagerDelegate {
         {
             getImagefromFlicker()
         }
-        
+        setupRefresh()
     }
     override func viewWillAppear(_ animated: Bool) {
         fetchTheKeyword()
     }
+    func setupRefresh(){
+        if #available(iOS 10.0, *) {
+            imageCollectionView.refreshControl = refreshControl
+        } else {
+            imageCollectionView.addSubview(refreshControl)
+        }
+        let refreshContents = Bundle.main.loadNibNamed("RefreshContents", owner: self, options: nil)
+        customView = refreshContents![0] as! UIView
+        customView.frame = refreshControl.bounds
+        refreshControl.addTarget(self, action: #selector(resetimages), for: .valueChanged)
+        refreshControl.addSubview(customView)
 
+    }
+    @objc func resetimages(){
+        pageNo += 1
+        
+        deleteImagesArray = selectedKeyword.images?.allObjects as? [Image]
+        for i in 0 ..< deleteImagesArray.count
+        {
+            //            selectedLocation.removeFromImages(deleteImagesArray[i])
+            dbStack.context.delete(deleteImagesArray[i])
+            dbStack.save()
+        }
+        refreshView()
+        refreshControl.endRefreshing()
+        getImagefromFlicker()
+    }
     func fetchTheKeyword(){
         let request: NSFetchRequest<Keyword>
         if #available(iOS 10.0, *) {
@@ -84,20 +112,24 @@ class FlickerImagesViewController: UIViewController, CoreDataManagerDelegate {
         client.sharedInstance.downloadPhotos(forList: downloadImagesArray,resolution: Constants.FlickrResponseKeys.ThumbURL)
     }
     
+    
 
 }
 extension FlickerImagesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return downloadImagesArray.count > 0 ? downloadImagesArray.count : selectedKeyword.images?.allObjects.count ?? 0
+//        return downloadImagesArray.count > 0 ? downloadImagesArray.count : selectedKeyword.images?.allObjects.count ?? 0
+        return 10000000
 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SharkCollectionViewCell
         
         if(imagesArray.count > indexPath.row){
-            let image = UIImage(data: imagesArray[indexPath.row].image_t! as Data)
+            print(indexPath.row % imagesArray.count)
+            let image = UIImage(data: imagesArray[indexPath.row % imagesArray.count].image_t! as Data)
             cell.bindCell(image: image)
         } else {
             cell.bindCell(image: nil)

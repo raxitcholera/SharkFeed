@@ -11,6 +11,7 @@
 		789876C92032EA3D00D830F6 /* Keyword+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789876C52032EA3D00D830F6 /* Keyword+CoreDataProperties.swift */; };
 		789876CA2032EA3D00D830F6 /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789876C62032EA3D00D830F6 /* Image+CoreDataClass.swift */; };
 		789876CB2032EA3D00D830F6 /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789876C72032EA3D00D830F6 /* Image+CoreDataProperties.swift */; };
+		78CEE31F20334F980083A568 /* RefreshContents.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78CEE31E20334F980083A568 /* RefreshContents.xib */; };
 		78DE91572032871F00FCA10A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE91562032871F00FCA10A /* AppDelegate.swift */; };
 		78DE915C2032871F00FCA10A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78DE915A2032871F00FCA10A /* Main.storyboard */; };
 		78DE91612032871F00FCA10A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78DE915F2032871F00FCA10A /* LaunchScreen.storyboard */; };
@@ -30,6 +31,7 @@
 		789876C52032EA3D00D830F6 /* Keyword+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyword+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		789876C62032EA3D00D830F6 /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
 		789876C72032EA3D00D830F6 /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		78CEE31E20334F980083A568 /* RefreshContents.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RefreshContents.xib; path = SharkFeed/View/RefreshContents.xib; sourceTree = SOURCE_ROOT; };
 		78DE91532032871F00FCA10A /* SharkFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharkFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78DE91562032871F00FCA10A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78DE915B2032871F00FCA10A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				78DE916C2032953300FCA10A /* FlickerImagesViewController.swift */,
+				78CEE31E20334F980083A568 /* RefreshContents.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78DE91612032871F00FCA10A /* LaunchScreen.storyboard in Resources */,
+				78CEE31F20334F980083A568 /* RefreshContents.xib in Resources */,
 				78DE91892032A96A00FCA10A /* Assets.xcassets in Resources */,
 				78DE915C2032871F00FCA10A /* Main.storyboard in Resources */,
 			);
