@@ -22,6 +22,7 @@
 		78DE918220329BC200FCA10A /* Keyword+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE917E20329BC200FCA10A /* Keyword+CoreDataClass.swift */; };
 		78DE918320329BC200FCA10A /* Keyword+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE917F20329BC200FCA10A /* Keyword+CoreDataProperties.swift */; };
 		78DE91892032A96A00FCA10A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78DE91882032A96A00FCA10A /* Assets.xcassets */; };
+		78DE918B2032B0CF00FCA10A /* SharkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE918A2032B0CF00FCA10A /* SharkCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		78DE917E20329BC200FCA10A /* Keyword+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyword+CoreDataClass.swift"; sourceTree = "<group>"; };
 		78DE917F20329BC200FCA10A /* Keyword+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyword+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		78DE91882032A96A00FCA10A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		78DE918A2032B0CF00FCA10A /* SharkCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharkCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		78DE91862032A70000FCA10A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				78DE918A2032B0CF00FCA10A /* SharkCollectionViewCell.swift */,
 				78DE915A2032871F00FCA10A /* Main.storyboard */,
 				78DE91882032A96A00FCA10A /* Assets.xcassets */,
 				78DE915F2032871F00FCA10A /* LaunchScreen.storyboard */,
@@ -203,6 +206,7 @@
 				78DE916D2032953300FCA10A /* FlickerImagesViewController.swift in Sources */,
 				78DE916B2032939800FCA10A /* client.swift in Sources */,
 				78DE91722032977300FCA10A /* commonFunctions.swift in Sources */,
+				78DE918B2032B0CF00FCA10A /* SharkCollectionViewCell.swift in Sources */,
 				78DE918220329BC200FCA10A /* Keyword+CoreDataClass.swift in Sources */,
 				78DE918320329BC200FCA10A /* Keyword+CoreDataProperties.swift in Sources */,
 				78DE917920329A6100FCA10A /* SharkFeed.xcdatamodeld in Sources */,
