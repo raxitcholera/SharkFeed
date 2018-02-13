@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		789876C82032EA3D00D830F6 /* Keyword+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789876C42032EA3D00D830F6 /* Keyword+CoreDataClass.swift */; };
+		789876C92032EA3D00D830F6 /* Keyword+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789876C52032EA3D00D830F6 /* Keyword+CoreDataProperties.swift */; };
+		789876CA2032EA3D00D830F6 /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789876C62032EA3D00D830F6 /* Image+CoreDataClass.swift */; };
+		789876CB2032EA3D00D830F6 /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789876C72032EA3D00D830F6 /* Image+CoreDataProperties.swift */; };
 		78DE91572032871F00FCA10A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE91562032871F00FCA10A /* AppDelegate.swift */; };
 		78DE915C2032871F00FCA10A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78DE915A2032871F00FCA10A /* Main.storyboard */; };
 		78DE91612032871F00FCA10A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78DE915F2032871F00FCA10A /* LaunchScreen.storyboard */; };
@@ -17,15 +21,15 @@
 		78DE91762032982700FCA10A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE91752032982700FCA10A /* Constants.swift */; };
 		78DE917920329A6100FCA10A /* SharkFeed.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 78DE917720329A6100FCA10A /* SharkFeed.xcdatamodeld */; };
 		78DE917B20329AB600FCA10A /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE917A20329AB600FCA10A /* CoreDataStack.swift */; };
-		78DE918020329BC200FCA10A /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE917C20329BC200FCA10A /* Image+CoreDataClass.swift */; };
-		78DE918120329BC200FCA10A /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE917D20329BC200FCA10A /* Image+CoreDataProperties.swift */; };
-		78DE918220329BC200FCA10A /* Keyword+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE917E20329BC200FCA10A /* Keyword+CoreDataClass.swift */; };
-		78DE918320329BC200FCA10A /* Keyword+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE917F20329BC200FCA10A /* Keyword+CoreDataProperties.swift */; };
 		78DE91892032A96A00FCA10A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78DE91882032A96A00FCA10A /* Assets.xcassets */; };
 		78DE918B2032B0CF00FCA10A /* SharkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE918A2032B0CF00FCA10A /* SharkCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		789876C42032EA3D00D830F6 /* Keyword+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyword+CoreDataClass.swift"; sourceTree = "<group>"; };
+		789876C52032EA3D00D830F6 /* Keyword+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyword+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		789876C62032EA3D00D830F6 /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
+		789876C72032EA3D00D830F6 /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		78DE91532032871F00FCA10A /* SharkFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharkFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78DE91562032871F00FCA10A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78DE915B2032871F00FCA10A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -38,10 +42,6 @@
 		78DE91752032982700FCA10A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		78DE917820329A6100FCA10A /* SharkFeed.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SharkFeed.xcdatamodel; sourceTree = "<group>"; };
 		78DE917A20329AB600FCA10A /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		78DE917C20329BC200FCA10A /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
-		78DE917D20329BC200FCA10A /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		78DE917E20329BC200FCA10A /* Keyword+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyword+CoreDataClass.swift"; sourceTree = "<group>"; };
-		78DE917F20329BC200FCA10A /* Keyword+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyword+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		78DE91882032A96A00FCA10A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78DE918A2032B0CF00FCA10A /* SharkCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharkCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,10 +89,10 @@
 		78DE91842032A6CE00FCA10A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				78DE917C20329BC200FCA10A /* Image+CoreDataClass.swift */,
-				78DE917D20329BC200FCA10A /* Image+CoreDataProperties.swift */,
-				78DE917E20329BC200FCA10A /* Keyword+CoreDataClass.swift */,
-				78DE917F20329BC200FCA10A /* Keyword+CoreDataProperties.swift */,
+				789876C42032EA3D00D830F6 /* Keyword+CoreDataClass.swift */,
+				789876C52032EA3D00D830F6 /* Keyword+CoreDataProperties.swift */,
+				789876C62032EA3D00D830F6 /* Image+CoreDataClass.swift */,
+				789876C72032EA3D00D830F6 /* Image+CoreDataProperties.swift */,
 				78DE917720329A6100FCA10A /* SharkFeed.xcdatamodeld */,
 				78DE9173203297D100FCA10A /* CoreDataManager.swift */,
 				78DE917A20329AB600FCA10A /* CoreDataStack.swift */,
@@ -201,17 +201,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78DE918020329BC200FCA10A /* Image+CoreDataClass.swift in Sources */,
-				78DE918120329BC200FCA10A /* Image+CoreDataProperties.swift in Sources */,
 				78DE916D2032953300FCA10A /* FlickerImagesViewController.swift in Sources */,
 				78DE916B2032939800FCA10A /* client.swift in Sources */,
 				78DE91722032977300FCA10A /* commonFunctions.swift in Sources */,
+				789876CA2032EA3D00D830F6 /* Image+CoreDataClass.swift in Sources */,
 				78DE918B2032B0CF00FCA10A /* SharkCollectionViewCell.swift in Sources */,
-				78DE918220329BC200FCA10A /* Keyword+CoreDataClass.swift in Sources */,
-				78DE918320329BC200FCA10A /* Keyword+CoreDataProperties.swift in Sources */,
+				789876CB2032EA3D00D830F6 /* Image+CoreDataProperties.swift in Sources */,
 				78DE917920329A6100FCA10A /* SharkFeed.xcdatamodeld in Sources */,
 				78DE9174203297D100FCA10A /* CoreDataManager.swift in Sources */,
+				789876C92032EA3D00D830F6 /* Keyword+CoreDataProperties.swift in Sources */,
 				78DE91572032871F00FCA10A /* AppDelegate.swift in Sources */,
+				789876C82032EA3D00D830F6 /* Keyword+CoreDataClass.swift in Sources */,
 				78DE91762032982700FCA10A /* Constants.swift in Sources */,
 				78DE917B20329AB600FCA10A /* CoreDataStack.swift in Sources */,
 			);

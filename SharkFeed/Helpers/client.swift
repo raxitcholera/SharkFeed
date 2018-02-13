@@ -88,19 +88,14 @@ class client: NSObject, URLSessionDelegate, URLSessionTaskDelegate, URLSessionDa
             let url = URL(string:photosList[i][resolution] as! String)
             if(url != nil)
             {
-                downloadResource(fromUrl: url!, atLocation: nil)
+                downloadResource(fromUrl: url!)
             }
         }
     }
-    internal func downloadResource(fromUrl url: URL, atLocation location: String?)
+    internal func downloadResource(fromUrl url: URL)
     {
         let task = bgSession.downloadTask(with: url)
-        if(location == nil){
-            task.taskDescription = "newImage"
-        }
-        else{
-            task.taskDescription = location
-        }
+        task.taskDescription = "newImage"
         task.resume()
         
     }

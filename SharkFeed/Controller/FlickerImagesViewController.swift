@@ -24,27 +24,41 @@ class FlickerImagesViewController: UIViewController, CoreDataManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        fetchTheKeyword()
+        self.title = "Test"
         imagesArray = selectedKeyword.images?.allObjects as? [Image] ?? [Image]()
         
         CoreDataManager.sharedManager.delegate = self
         
-        if(selectedKeyword.images?.allObjects.count == 0)
+        if(selectedKeyword.images?.allObjects.count == 0 ||  selectedKeyword.images?.allObjects.count == nil)
         {
             getImagefromFlicker()
         }
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        fetchTheKeyword()
+    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func fetchTheKeyword(){
+        let request: NSFetchRequest<Keyword>
+        if #available(iOS 10.0, *) {
+            request = Keyword.fetchRequest()
+        } else {
+            request = NSFetchRequest(entityName: "Keyword")
+        }
+        do {
+            let results = try dbStack.context.fetch(request)
+            selectedKeyword = results[0]
+        } catch let error {
+            print(error.localizedDescription)
+        }
+
     }
     
     func refreshView()
     {
         imagesArray = selectedKeyword.images?.allObjects as! [Image]
-        pageNo += 1
         performOnMainthread {
             self.imageCollectionView.reloadData()
         }

@@ -39,8 +39,9 @@ class CoreDataManager: NSObject, SessionDownloadDelegate {
         {
             if let data = resourceData
             {
-                //convert into Image type
-                //save to DB
+//                let image = Image(imageData: NSData(data:data), context: appDelegate.stack.context)
+                let image = Image(image_t: NSData(data:data), context: appDelegate.stack.context)
+                keyword.addToImages(image)
                 dbStack.save()
                 delegate?.refreshView()
             }

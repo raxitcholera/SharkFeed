@@ -2,7 +2,7 @@
 //  Image+CoreDataProperties.swift
 //  SharkFeed
 //
-//  Created by Raxit Cholera on 2/12/18.
+//  Created by Raxit Cholera on 2/13/18.
 //  Copyright © 2018 Raxit Cholera. All rights reserved.
 //
 //
@@ -18,8 +18,6 @@ extension Image {
     }
 
     @NSManaged public var image_t: NSData?
-    @NSManaged public var image_c: NSData?
-    @NSManaged public var image_l: NSData?
     @NSManaged public var keyword: Keyword?
 
 }
