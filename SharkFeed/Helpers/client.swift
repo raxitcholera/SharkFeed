@@ -54,8 +54,7 @@ class client: NSObject, URLSessionDelegate, URLSessionTaskDelegate, URLSessionDa
             Constants.FlickrParameterKeys.Extras: Constants.FlickrParameterValues.Extras,
             Constants.FlickrParameterKeys.Format: Constants.FlickrParameterValues.ResponseFormat,
             Constants.FlickrParameterKeys.NoJSONCallback: Constants.FlickrParameterValues.DisableJSONCallback,
-            Constants.FlickrParameterKeys.Page:"\(page)",
-            Constants.FlickrParameterKeys.PerPage:"21"
+            Constants.FlickrParameterKeys.Page:"\(page)"
         ]
         getDataFromURL(url: URLFromParameters(parameters as [String:AnyObject])){ (responseData, error) in
             if error != nil {

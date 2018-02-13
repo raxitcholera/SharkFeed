@@ -7,13 +7,33 @@
 //
 
 import UIKit
+import CoreData
 
-class FlickerImagesViewController: UIViewController {
+private let reuseIdentifier = "sharkImages"
 
+class FlickerImagesViewController: UIViewController, CoreDataManagerDelegate {
+
+    
+    @IBOutlet weak var imageCollectionView: UICollectionView!
+    
+    var selectedKeyword:Keyword!
+    private var imagesArray: [Image]!
+    private var deleteImagesArray:[Image]!
+    private var downloadImagesArray = [[String:Any]]()
+    var pageNo:Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        imagesArray = selectedKeyword.images?.allObjects as? [Image] ?? [Image]()
+        
+        CoreDataManager.sharedManager.delegate = self
+        
+        if(selectedKeyword.images?.allObjects.count == 0)
+        {
+            getImagefromFlicker()
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,18 +41,54 @@ class FlickerImagesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func refreshView()
+    {
+        imagesArray = selectedKeyword.images?.allObjects as! [Image]
+        pageNo += 1
+        performOnMainthread {
+            self.imageCollectionView.reloadData()
+        }
+    }
+    
+    func getImagefromFlicker(){
+        
+        client.sharedInstance.fetchImagesFromFlicker(keyword: selectedKeyword.text!, ofPage: pageNo) { (result, error) in
+            
+            if error != nil {
+                showAlertwith(title: "Error Fetching Images", message: "Flicker may have responded unexpectely", vc: self)
+            } else {
+                self.downloadImagesArray = result as! [[String:Any]]
+                
+                self.refreshView()
+                self.downloadPhotos()
+            }
+        }
+    }
+    private func downloadPhotos()
+    {
+        CoreDataManager.sharedManager.keyword = selectedKeyword
+        client.sharedInstance.downloadPhotos(forList: downloadImagesArray,resolution: Constants.FlickrResponseKeys.ThumbURL)
+    }
+    
 
 }
 extension FlickerImagesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        return downloadImagesArray.count > 0 ? downloadImagesArray.count : selectedKeyword.images?.allObjects.count ?? 0
+
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
-    }
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        <#code#>
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SharkCollectionViewCell
+        
+        if(imagesArray.count > indexPath.row){
+            let image = UIImage(data: imagesArray[indexPath.row].image_t! as Data)
+            cell.bindCell(image: image)
+        } else {
+            cell.bindCell(image: nil)
+        }
+        
+        return cell
     }
 }
