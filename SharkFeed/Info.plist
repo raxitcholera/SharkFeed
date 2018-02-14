@@ -41,5 +41,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>To save photos to camara roll</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>To add to photos</string>
+    
 </dict>
 </plist>

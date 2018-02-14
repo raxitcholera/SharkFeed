@@ -25,8 +25,10 @@ class ImageDetailViewController: UIViewController {
     }
     
     @IBAction func downloadButtonPressed(_ sender: Any) {
+        UIImageWriteToSavedPhotosAlbum (mainImageView.image!, nil, nil, nil);
     }
     @IBAction func openInFlickerButtonPressed(_ sender: Any) {
+        
     }
     
 
