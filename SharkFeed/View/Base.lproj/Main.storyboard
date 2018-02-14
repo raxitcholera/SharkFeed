@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="S8G-RP-IDE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2xg-BI-3kj">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="8" y="72" width="359" height="587"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1iJ-eT-v5z">
                                     <size key="itemSize" width="120" height="87"/>
@@ -67,20 +67,92 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2xg-BI-3kj" secondAttribute="bottom" id="58Y-wI-6b0"/>
-                            <constraint firstItem="2xg-BI-3kj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KT2-Hr-TIX"/>
-                            <constraint firstItem="2xg-BI-3kj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="b0c-Sv-dko"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2xg-BI-3kj" secondAttribute="trailing" id="kdm-Db-Qxl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2xg-BI-3kj" secondAttribute="bottom" constant="8" id="58Y-wI-6b0"/>
+                            <constraint firstItem="2xg-BI-3kj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="KT2-Hr-TIX"/>
+                            <constraint firstItem="2xg-BI-3kj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="b0c-Sv-dko"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2xg-BI-3kj" secondAttribute="trailing" constant="8" id="kdm-Db-Qxl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="pfL-DE-hw5"/>
                     <connections>
                         <outlet property="imageCollectionView" destination="2xg-BI-3kj" id="Vhf-ex-d9V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="476" y="133.5832083958021"/>
+        </scene>
+        <!--Image Detail View Controller-->
+        <scene sceneID="j7c-qq-SiF">
+            <objects>
+                <viewController storyboardIdentifier="imageDetailed" id="xcb-nb-yoc" customClass="ImageDetailViewController" customModule="SharkFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S9z-VW-SAi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="24i-yF-qEF">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i1r-4e-x6Y">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Download" image="Download" landscapeImage="Download" largeContentSizeImage="Download" id="V4l-lQ-Tat">
+                                        <connections>
+                                            <action selector="downloadButtonPressed:" destination="xcb-nb-yoc" id="upm-oj-lwM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="dG5-se-NGa"/>
+                                    <barButtonItem title="Open in App" image="Open_in_flickr" landscapeImage="Open_in_flickr" largeContentSizeImage="Open_in_flickr" id="NBI-X8-FTG">
+                                        <connections>
+                                            <action selector="openInFlickerButtonPressed:" destination="xcb-nb-yoc" id="J3X-Tr-JRV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="24i-yF-qEF" firstAttribute="leading" secondItem="bnY-bU-ef5" secondAttribute="leading" id="8BF-Sp-eHr"/>
+                            <constraint firstItem="24i-yF-qEF" firstAttribute="top" secondItem="bnY-bU-ef5" secondAttribute="top" id="VAl-40-Zsh"/>
+                            <constraint firstItem="i1r-4e-x6Y" firstAttribute="leading" secondItem="bnY-bU-ef5" secondAttribute="leading" id="ak5-r9-NDZ"/>
+                            <constraint firstItem="i1r-4e-x6Y" firstAttribute="trailing" secondItem="bnY-bU-ef5" secondAttribute="trailing" id="cD1-Nw-bL4"/>
+                            <constraint firstItem="bnY-bU-ef5" firstAttribute="bottom" secondItem="24i-yF-qEF" secondAttribute="bottom" id="e7i-Ox-GUd"/>
+                            <constraint firstItem="i1r-4e-x6Y" firstAttribute="bottom" secondItem="bnY-bU-ef5" secondAttribute="bottom" id="mdu-Gr-EFH"/>
+                            <constraint firstItem="bnY-bU-ef5" firstAttribute="trailing" secondItem="24i-yF-qEF" secondAttribute="trailing" id="xPA-oV-aml"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bnY-bU-ef5"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomToolBar" destination="i1r-4e-x6Y" id="IKe-SO-cLc"/>
+                        <outlet property="mainImageView" destination="24i-yF-qEF" id="moq-Gm-ntD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8dc-xO-UPo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1159.2" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ttY-lg-YcS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="S8G-RP-IDE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qoz-R3-oBd">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="doK-CQ-o9u"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9tI-bA-Quc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-273" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Download" width="25" height="29"/>
+        <image name="Open_in_flickr" width="27" height="26"/>
+    </resources>
 </document>

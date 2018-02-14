@@ -229,6 +229,7 @@ class client: NSObject, URLSessionDelegate, URLSessionTaskDelegate, URLSessionDa
     }
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL)
     {
+        
         let data = FileManager.default.contents(atPath: location.relativePath)
         performOnMainthread {
             

@@ -128,7 +128,6 @@ extension FlickerImagesViewController: UICollectionViewDelegate, UICollectionVie
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SharkCollectionViewCell
         
         if(imagesArray.count > indexPath.row){
-            print(indexPath.row % imagesArray.count)
             let image = UIImage(data: imagesArray[indexPath.row % imagesArray.count].image_t! as Data)
             cell.bindCell(image: image)
         } else {
@@ -136,5 +135,10 @@ extension FlickerImagesViewController: UICollectionViewDelegate, UICollectionVie
         }
         
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let imagesVC = storyboard?.instantiateViewController(withIdentifier: "imageDetailed") as! ImageDetailViewController
+        imagesVC.selectedImage = imagesArray[indexPath.row]
+        navigationController?.pushViewController(imagesVC, animated: true)
     }
 }
